@@ -20,10 +20,10 @@ az aks get-credentials --resource-group $RESOURCE_GROUP --name $CLUSTER_NAME
 az aks nodepool add \
     -g $RESOURCE_GROUP \
     --cluster-name $CLUSTER_NAME \
-    --name mywasipool \
+    --name wasi \
     --node-count 1 \
     --workload-runtime wasmwasi 
 
 az aks nodepool show -g $RESOURCE_GROUP \
     --cluster-name $CLUSTER_NAME \
-    -n mywasipool
+    -n wasi

@@ -4,8 +4,9 @@ Test K8S with WASI
 
 ## prerequisites
 
-- Azure CLI with Bicep
+- Azure CLI with Bicep `az bicep install`
 - kubectl `az aks install-cli`
+- AKS preview extension `az extension add --name aks-preview` 
 
 ## get started
 
@@ -20,7 +21,7 @@ az provider register --namespace Microsoft.ContainerService
 deploy and check whether WASI node pool is available
 
 ```
-./deploy-cluster.sh
+./deploy-cluster-bicep.sh
 kubectl get nodes -o wide
 ```
 
